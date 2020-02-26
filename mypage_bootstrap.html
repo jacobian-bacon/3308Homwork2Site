@@ -8,10 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="resources/css/my_style.css" rel="stylesheet">
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="mypage_support.js"></script>
@@ -55,7 +54,7 @@
         .btn-circle.btn-sm {
             font-size: .8em !important;
             line-height: 1.5em;
-            padding: 0px 0px 0px 4px;
+            padding: 0px 0px .9px 4.6px;
             position: absolute !important;
             float: left;
             float: top;
@@ -67,8 +66,8 @@
         }
 
         .btn-circle.btn-twt {
-            padding: 0px 0px 5px 7px !important;
-            /* line-height: 1.5em; */
+            padding: 0px 0px 3px 7.6px !important;
+            line-height: 1.5em;
             font-size: .8em !important;
             float: left;
             float: top;
@@ -113,23 +112,28 @@
 
 <body>
     <ul>
-    <nav class="navbar navbar-inverse-sm bg-dark navbar-dark">
-        <div class="container-fluid active d-inline-block align-top">
-            <a class="navbar-brand " href="index.html">Index</a>
-            <div class="navbar-header d-inline-block align-top">
+        <nav class="navbar navbar-inverse-sm bg-dark navbar-dark">
+            <div class="container-fluid active d-inline-block align-top">
+                <a class="navbar-brand" href="index.html">
+                    <img class="rounded-circle" src="pharaoh_face.png" alt="index" width="30" height="30">Index
+                </a>
+                <div class="navbar-header d-inline-block align-top">
 
-                <li class="nav-item d-inline-block align-top">
-                    <a class="nav-link" href="tic-tac-toe/tic-tac-toe.html">Tic-tac-toe</a>
-                </li>
-                <li class="nav-item d-inline-block align-top">
-                    <a class="nav-link" href="mypage_bootstrap.html">About Me</a></li>
-                </li>
-                <li class="nav-item d-inline-block align-top">
-                    <a class="nav-link" href="signup-modal/login.html">Signup</a></li>
-                </li>
+                    <li class="nav-item d-inline-block align-top">
+                        <a class="nav-link" href="tic-tac-toe/tic-tac-toe.html">Tic-tac-toe</a>
+                    </li>
+                    <li class="nav-item d-inline-block align-top">
+                        <a class="nav-link" href="mypage_bootstrap.html">About Me</a></li>
+                    </li>
+                    <li class="nav-item d-inline-block align-top">
+                        <a class="nav-link" href="signup-modal/login.html">Signup</a></li>
+                    </li>
+                    <li class="nav-item d-inline-block align-top">
+                        <a class="nav-link" href="SpecRunner.html">SpecRunner</a></li>
+                    </li>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
     </ul>
 
     <div class="container">
@@ -185,12 +189,13 @@
         </p>
         <div class="container-fluid" id="mainContainer">
             <div class="row justify-content-center">
-                <div class=" col text-md-right my-auto">
+                <div class=" col text-md-center my-auto">
                     <h4>Interests</h4>
                 </div>
                 <div class="col my-auto">
                     <div class='btn-group my-auto'>
-                        <button type='button' class='btn btn-primary my-auto' onclick='addCard()'>Add Interest</button>
+                        <button type='button' class='btn btn-primary my-auto' onclick='addMyCard()'>Add
+                            Interest</button>
                     </div>
                 </div>
             </div>
@@ -201,7 +206,7 @@
                     <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/S_F-E-CAMERON_EGYPT_2005_RAMASEUM_01360.JPG"
                         class="card-img-top" alt="Godly">
                     <button type='button' class='btn btn-primary btn-circle btn-twt d-flex' id='twitButton0'
-                        onclick='getTweetInfo(this)'>+</button>
+                        onclick='addCard(this)'>+</button>
                     <div class="card-body">
                         <h5 class="card-title">Reveling in my Godly nature</h5>
                         <p class="card-text text-muted">Worship me.</p>
@@ -213,7 +218,7 @@
                     <img src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Osiris%2C_God_of_the_Dead.jpg"
                         class="card-img-top" alt="Ka Returning">
                     <button type='button' class='btn btn-primary btn-circle btn-twt d-flex' id='twitButton1'
-                        onclick='getTweetInfo(this)'>+</button>
+                        onclick='addCard(this)'>+</button>
                     <div class="card-body">
                         <h5 class="card-title">Building my Pathway into the Afterlife</h5>
                         <p class="card-text text-muted">I will live forever.</p>
@@ -226,7 +231,7 @@
                     <img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Senenmut-Grab.JPG"
                         class="card-img-top" alt="Conquering">
                     <button type='button' class='btn btn-primary btn-circle btn-twt d-flex' id='twitButton2'
-                        onclick='getTweetInfo(this)'>+</button>
+                        onclick='addCard(this)'>+</button>
                     <div class="card-body">
                         <h5 class="card-title">Conquering All</h5>
                         <p class="card-text text-muted">A worthy goal.</p>

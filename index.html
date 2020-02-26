@@ -7,19 +7,111 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <title>Register Page</title>
-    <link rel='icon' href='../resources/img/favicon.ico' type='image/x-icon' />
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <link href="../resources/css/my_style.css" rel="stylesheet">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>About Me</title>
+    <style>
+        blockquote.twitter-tweet {
+            visibility: hidden;
+        }
+
+        blockquote.twitter-tweet p {
+            visibility: hidden;
+        }
+
+        .card {
+            display: inline-block;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111;
+        }
+
+        .btn-circle.btn-sm {
+            font-size: .8em !important;
+            line-height: 1.5em;
+            padding: 0px 0px .9px 4.6px;
+            position: absolute !important;
+            float: left;
+            float: top;
+            width: 20px;
+            height: 20px;
+            z-index: 1000;
+            border-radius: 15px;
+            /* font-size: 8px; */
+        }
+
+        .btn-circle.btn-twt {
+            padding: 0px 0px 3px 7.6px !important;
+            line-height: 1.5em;
+            font-size: .8em !important;
+            float: left;
+            float: top;
+            width: 25px;
+            height: 25px;
+            position: absolute !important;
+            z-index: 1000;
+            border-radius: 15px;
+            /* font-size: 8px; */
+        }
+
+        [id^='upload'] {
+            opacity: 0;
+        }
+
+
+        [id^=labelloadup] {
+            position: absolute;
+        }
+
+        .image-area {
+            border: 2px dashed rgba(255, 255, 255, 0.7);
+            position: relative;
+        }
+
+        .image-area::before {
+            content: 'Uploaded image result';
+            color: #fff;
+            font-weight: bold;
+            text-transform: uppercase;
+            position: absolute;
+            font-size: 0.8rem;
+            z-index: 1;
+        }
+
+        .image-area img {
+            z-index: 2;
+            position: relative;
+        }
+    </style>
 </head>
 
 <body>
     <nav class="navbar navbar-inverse-sm bg-dark navbar-dark">
         <div class="container-fluid active d-inline-block align-top">
-            <a class="navbar-brand " href="index.html">Index</a>
+            <a class="navbar-brand" href="index.html">
+                <img class="rounded-circle" src="pharaoh_face.png" alt="index" width="30" height="30">Index
+            </a>
             <div class="navbar-header d-inline-block align-top">
 
                 <li class="nav-item d-inline-block align-top">
@@ -30,6 +122,9 @@
                 </li>
                 <li class="nav-item d-inline-block align-top">
                     <a class="nav-link" href="signup-modal/login.html">Signup</a></li>
+                </li>
+                <li class="nav-item d-inline-block align-top">
+                    <a class="nav-link" href="SpecRunner.html">SpecRunner</a></li>
                 </li>
             </div>
         </div>
@@ -97,6 +192,23 @@
                         <h3 class="card-title">Tic-tac-toe</h3>
                         <p class="card-text">It's fun. I promise.</p>
                         <a href="tic-tac-toe/tic-tac-toe.html" class="btn text-white border-light">Delight Yourself</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-6">
+                <div class="card card-body">Where's my tiger!</div>
+            </div>
+            <div class="col-6">
+                <div class="card text-white bg-dark">
+                    <div class="card-body">
+                        <h3 class="card-title">Jasmine</h3>
+                        <p class="card-text">It's fun. I promise.</p>
+                        <a href="SpecRunner.html" class="btn text-white border-light">Test It. Yourself.</a>
                     </div>
                 </div>
             </div>
